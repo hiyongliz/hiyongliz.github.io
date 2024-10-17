@@ -1,5 +1,5 @@
 <template>
-  <div flex="~" justify-between w-full h-100px items-center px-30>
+  <div flex="~" justify-between w-full h-100px items-center px-50>
     <div flex="~" items-center>
       <NuxtLink to="/">
         <Logo />
