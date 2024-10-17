@@ -15,12 +15,17 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
+    "@giscus/vue": "^3.0.0",
+    "@nuxt-themes/alpine": "^1.6.6",
     "@nuxt-themes/docus": "^1.15.0",
     "@nuxt-themes/typography": "^1.0.1",
     "@unocss/nuxt": "^0.63.4",
     "@vueuse/core": "^11.1.0",
     "@vueuse/nuxt": "^11.1.0",
     "eslint": "^9.12.0",
+    "markdown-it-magic-link": "^0.1.4",
+    "nuxt-compile-markdown": "^0.1.1",
+    "shiki": "^1.22.0",
     "unocss": "^0.63.4"
   }
 }

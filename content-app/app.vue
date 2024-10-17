@@ -17,12 +17,6 @@ body,
   padding: 0;
 }
 
-:root {
-  --td-component-border: #cccccc;
-  --td-border-level-2-color: #cccccc;
-
-}
-
 html,
 body {
   height: 100vh;

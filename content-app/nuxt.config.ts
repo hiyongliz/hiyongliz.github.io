@@ -1,10 +1,20 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import MarkdownItMagicLink from 'markdown-it-magic-link'
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo.png' },
+      ],
+    },
+  },
+
+  devtools: { enabled: false },
   modules: [
-    '@nuxt/content',
+    // '@nuxt/content',
     '@unocss/nuxt',
     '@vueuse/nuxt',
+    'nuxt-compile-markdown',
   ],
 
   routeRules: {
@@ -12,18 +22,35 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-10-14',
-  extends: '@nuxt-themes/typography',
 
-  content: {
-    highlight: {
-      theme: {
-        // Default theme (same as single string)
-        default: 'github-light',
-        // Theme used if `html.dark`
-        dark: 'github-dark',
-        // Theme used if `html.sepia`
-        sepia: 'monokai',
+  features: {
+    // For UnoCSS
+    inlineStyles: false,
+  },
+
+  markdown: {
+    shiki: {
+      themes: {
+        light: 'vitesse-light',
+        dark: 'vitesse-dark',
       },
     },
+    markdownItSetup(md) {
+      md.use(MarkdownItMagicLink, {
+        linksMap: {
+          QiFi: 'https://github.com/qifi-dev/qrs',
+        },
+        imageOverrides: [
+          ['https://github.com/qifi-dev/qrs', 'https://cdn.jsdelivr.net/gh/qifi-dev/qrs/public/logo.svg'],
+        ],
+      })
+    },
   },
+
+  css: [
+    '@unocss/reset/tailwind.css',
+  ],
+
+  ssr: false,
+
 })
