@@ -4,7 +4,7 @@ import '~/styles/main.css';
 
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage :key="$route.fullPath" />
   </NuxtLayout>
 </template>
 
@@ -17,8 +17,14 @@ body,
   padding: 0;
 }
 
-html,
 body {
-  height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1921px) {
+  body {
+    font-size: 18px;
+  }
 }
 </style>

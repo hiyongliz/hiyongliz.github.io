@@ -11,7 +11,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
   modules: [
-    // '@nuxt/content',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     'nuxt-compile-markdown',
@@ -36,7 +35,8 @@ export default defineNuxtConfig({
       },
     },
     markdownItSetup(md) {
-      md.use(MarkdownItMagicLink, {
+      // @ts-ignore
+      md.use(MarkdownItMagicLink as any, {
         linksMap: {
           QiFi: 'https://github.com/qifi-dev/qrs',
         },
@@ -52,5 +52,4 @@ export default defineNuxtConfig({
   ],
 
   ssr: false,
-
 })

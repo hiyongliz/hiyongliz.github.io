@@ -8,6 +8,14 @@ body,
 
 body {
   --uno: color-base font-sans;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1921px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 html {
@@ -27,15 +35,19 @@ html.dark {
   animation: none;
   mix-blend-mode: normal;
 }
+
 ::view-transition-old(root) {
   z-index: 1;
 }
+
 ::view-transition-new(root) {
   z-index: 999999;
 }
+
 .dark::view-transition-old(root) {
   z-index: 999999;
 }
+
 .dark::view-transition-new(root) {
   z-index: 1;
 }
@@ -115,11 +127,11 @@ html.dark {
   --uno: text-xl mb5 mt4 op75 border-b border-base py2;
 }
 
-.markdown-content p + p {
+.markdown-content p+p {
   --uno: mt5;
 }
 
-.markdown-content p > code {
+.markdown-content p>code {
   --uno: px1.5 py1 bg-hex-8883 rounded max-w-200 of-auto text-sm;
 }
 
@@ -173,4 +185,68 @@ html.dark {
   height: 1.6em;
   width: 1.6em;
   border-radius: 50%;
+}
+
+/* 从 app.vue、layouts/default.vue 和 NavBar.vue 合并的样式 */
+.content-container,
+.giscus-container,
+.navbar-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content-container,
+.giscus-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+
+  .content-container,
+  .giscus-container,
+  .navbar-content {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .content-container,
+  .giscus-container,
+  .navbar-content {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .content-container,
+  .giscus-container,
+  .navbar-content {
+    max-width: 1200px;
+  }
 }
