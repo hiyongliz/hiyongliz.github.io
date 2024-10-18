@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { data } from '~/data/weekly'
+import { data } from '~/data/weekly';
 
 const sortedPosts = computed(() => {
   return [...data].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

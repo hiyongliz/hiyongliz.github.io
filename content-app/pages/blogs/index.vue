@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { data } from '~/data/blogs'
+import { data } from '~/data/blogs';
 
 const sortedPosts = computed(() => {
   return [...data].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -8,16 +8,24 @@ const sortedPosts = computed(() => {
 
 <template>
   <div class="blogs-container">
-    <h1 class="page-title">博客</h1>
+    <h1 class="page-title">
+      博客
+    </h1>
     <ul v-if="sortedPosts.length" class="post-list">
       <li v-for="post in sortedPosts" :key="post.title" class="post-item">
         <NuxtLink :to="`/blogs/${post.title}`" class="post-link" target="_blank">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <p v-if="post.date" class="post-date">{{ new Date(post.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' }) }}</p>
+          <h2 class="post-title">
+            {{ post.title }}
+          </h2>
+          <p v-if="post.date" class="post-date">
+            {{ new Date(post.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+          </p>
         </NuxtLink>
       </li>
     </ul>
-    <p v-else class="no-posts">暂时没有博客。</p>
+    <p v-else class="no-posts">
+      暂时没有博客。
+    </p>
   </div>
 </template>
 
