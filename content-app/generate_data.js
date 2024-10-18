@@ -61,7 +61,7 @@ async function main() {
   const weeklyMdFiles = await getMdFiles(weeklyDir)
   await generateDataTs(weeklyMdFiles, 'data/weekly.ts')
 
-  console.log('data.ts 已生成')
+  console.log('✅Data Files Generated')
 }
 
 main().catch(console.error)

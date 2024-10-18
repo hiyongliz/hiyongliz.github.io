@@ -13,7 +13,9 @@
         <NuxtLink to="/weekly">
           <div>周刊</div>
         </NuxtLink>
-        <div>RSS</div>
+        <NuxtLink to="https://github.com/hiyongliz/hiyongliz.github.io" target="_blank">
+          <div>GitHub</div>
+        </NuxtLink>
       </div>
     </div>
   </nav>
