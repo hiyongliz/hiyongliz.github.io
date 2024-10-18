@@ -2,9 +2,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "node generate_data.js && nuxt build",
+    "dev": "node generate_data.js && nuxt dev",
+    "generate": "node generate_data.js && nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
