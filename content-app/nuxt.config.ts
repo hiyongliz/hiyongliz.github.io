@@ -35,7 +35,6 @@ export default defineNuxtConfig({
       },
     },
     markdownItSetup(md) {
-      // @ts-ignore
       md.use(MarkdownItMagicLink as any, {
         linksMap: {
           QiFi: 'https://github.com/qifi-dev/qrs',
@@ -51,5 +50,5 @@ export default defineNuxtConfig({
     '@unocss/reset/tailwind.css',
   ],
 
-  ssr: false,
+  ssr: true,
 })
