@@ -19,6 +19,9 @@ devDependencies:
   '@giscus/vue':
     specifier: ^3.0.0
     version: 3.0.0(vue@3.5.12)
+  '@shikijs/markdown-it':
+    specifier: ^1.22.0
+    version: 1.22.0
   '@unocss/nuxt':
     specifier: ^0.63.4
     version: 0.63.4(postcss@8.4.47)(vite@5.4.9)(webpack@5.95.0)

@@ -143,6 +143,10 @@ html.dark {
   background: #f7f7f7 !important;
 }
 
+.markdown-content li {
+  --uno: pl-3 my2;
+}
+
 .dark .markdown-content .shiki {
   background: var(--shiki-dark-bg) !important;
 }
